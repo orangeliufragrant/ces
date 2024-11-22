@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    @keyframes breath {
+      from {
+        opacity: 0.1;
+      } /* 动画开始时的不透明度 */
+      50% {
+        opacity: 1;
+      } /* 动画50% 时的不透明度 */
+      to {
+        opacity: 0.1;
+      } /* 动画结束时的不透明度 */
+    }
+
+    @keyframes scale-breathe {
+      from {
+        /* transform: scale(1); */
+        opacity: 1;
+      }
+      /* 25% {
+        transform: scale(1.01);
+        box-shadow:0 1px 2px #47226ea1;
+      } */
+      50% {
+        /* transform: scale(0.99); */
+        /* box-shadow: 0px 1px 1px #47226ea1, 5px -5px 1px #47226ea1,
+          -5px 5px 1px #47226ea1, -5px -5px 1px #47226ea1; */
+          opacity: 0.95;
+      }
+      to {
+        /* transform: scale(1); */
+        opacity: 1;
+      }
+    }
+
+    .bg {
+      /* margin-top: 80px; */
+      /* 加载背景图 */
+      background-image: url(./img/bg.png);
+      /* 背景图垂直、水平均居中 */
+      background-position: center -108px;
+      /* 背景图不平铺 */
+      background-repeat: no-repeat;
+      /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+      /* background-attachment: fixed; */
+      /* 让背景图基于容器大小伸缩 */
+      background-size: 100% 100%;
+      /* background-size: cover; */
+      /* 设置背景颜色，背景图加载过程中会显示背景色 */
+      /* background-color: #464646; */
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      padding-top: 80px;
+      animation: scale-breathe 3s infinite linear;
+      position: fixed;
+    }
+
+    .gradient-text {
+      z-index: 99;
+      background-image: linear-gradient(
+        to right,
+        #f1561c,
+        #d2e8e7 50%,
+        #0253cb
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 96px;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      width: 640px;
+      /* border: 1px solid red; */
+      color: #fff;
+      text-align: center;
+    }
+    .gradient-text2 {
+      z-index: 99;
+      background-image: linear-gradient(
+        to right,
+        #f1561c,
+        #d2e8e7 50%,
+        #0253cb
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 50px;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      width: 640px;
+      /* border: 1px solid red; */
+      color: #fff;
+      text-align: center;
+    }
+    .hx {
+      width: 100vw;
+    }
+  </style>
+
+  <body>
+    <div
+      style="
+        background-color: #160528;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+      "
+    >
+      <div style="color: #fff">
+        <h1>xxxxxxxx</h1>
+      </div>
+      <div
+        style="
+          color: #fff;
+          display: flex;
+          align-items: center;
+          width: 367px;
+          justify-content: space-between;
+        "
+      >
+        <div>首页</div>
+        <div>业务介绍</div>
+        <div>关于我们</div>
+        <div>联系我们</div>
+      </div>
+    </div>
+    <div class="bg"></div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <div class="gradient-text" style="margin-top: 160px">海云智能物联</div>
+      <!-- <div class="gradient-text">HAI YUN AIOT</div> -->
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <!-- <div class="gradient-text" style="margin-top: 80px">海云智能物联</div> -->
+      <div class="gradient-text2">HAI YUN AIOT</div>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        /* border: 1px solid red; */
+        z-index: 99;
+      "
+    >
+      <div
+        style="
+          width: 479px;
+          height: 445px;
+          margin-right: 445px;
+          /* display: flex;
+          justify-content: center;
+          align-items: center; */
+          text-align: center;
+          background-image: url(./img/l-bg.png);
+          color: #fff;
+          font-size: 36px;
+          z-index: 99;
+        "
+      >
+        <!-- <img src="./img/l.png" style="height: 445px; width: 479px" alt="" /> -->
+        <div style="margin-top: 360px">雷 ITC</div>
+      </div>
+      <div
+        style="
+          width: 479px;
+          height: 445px;
+          /* display: flex;
+          justify-content: center;
+          align-items: center; */
+          text-align: center;
+          background-image: url(./img/hy-bg.png);
+          color: #fff;
+          font-size: 36px;
+          z-index: 99;
+        "
+      >
+        <!-- <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 479px;
+            height: 445px;
+          "
+        >
+          <img
+            src="./img/hy.png"
+            style="
+              height: 270px;
+              width: 270px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+            alt=""
+          />
+        </div> -->
+        <div style="margin-top: 360px">海云一站式跨境服务平台</div>
+      </div>
+    </div>
+  </body>
+</html>
